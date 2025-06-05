@@ -13,5 +13,6 @@ Displays a mana bar when shapeshifted.
 ## Install SuperWoW (Optional)
 
 Provides accurate mana values.
-
 https://github.com/balakethelock/SuperWoW
+
+The SUPERWOW_VERSION method of implementing SuperWoW was not working at all for me so I've added a failsafe to ensure SuperWoW get's used no matter what.
