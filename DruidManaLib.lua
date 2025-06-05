@@ -230,7 +230,13 @@ function DruidManaLib:UpdateReflectionRank() self.db.reflectionRank = getReflect
 
 function DruidManaLib:IsUsingMana() return UnitPowerType("player") == 0 end
 
-function DruidManaLib:GetMana() return self.db.mana end
+function DruidManaLib:GetMana() 
+    local power, mana = UnitMana("player")
+    if mana ~= nil then
+        return mana
+    else
+        return self.db.mana end
+    end
 
 function DruidManaLib:GetMaxMana() return self.db.maxMana end
 
